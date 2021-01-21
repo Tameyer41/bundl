@@ -1,0 +1,35 @@
+<div class="container mx-auto my-8 px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="h3"><%= link_to 'Campaigns', campaigns_path %> > Campaign #<%= @campaign.id %></h1>
+      <%= link_to 'Edit', edit_campaign_path(@campaign), class: "btn btn-link" %>
+    </div>
+
+    <div class="bg-white rounded shadow p-8">
+            <div class="mb-4">
+        <h5>User</h5>
+        <%= @campaign.user %>
+      </div>
+            <div class="mb-4">
+        <h5>Title</h5>
+        <%= @campaign.title %>
+      </div>
+            <div class="mb-4">
+        <h5>Description</h5>
+        <%= @campaign.description %>
+      </div>
+            <div class="mb-4">
+        <h5>Link</h5>
+        <%= @campaign.link %>
+      </div>
+            <div class="mb-4">
+        <h5>Paymenttype</h5>
+        <%= @campaign.paymenttype %>
+      </div>
+            <div class="mb-4">
+        <h5>Paymentamount</h5>
+        <%= @campaign.paymentamount %>
+      </div>
+          </div>
+  </div>
+</div>
