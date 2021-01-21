@@ -1,0 +1,12 @@
+--- !ruby/object:Jumpstart::Configuration
+application_name: Bundl Web App
+business_name: Bundl
+domain: example.com
+support_email: support@trybundl.com
+default_from_email: Jumpstart <support@example.com>
+business_address: ''
+background_job_processor: async
+email_provider: ''
+personal_accounts: false
+livereload: false
+register_with_account: false
