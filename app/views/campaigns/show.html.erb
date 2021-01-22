@@ -1,3 +1,5 @@
+<% if user_signed_in? && current_user.id == @campaign.user_id %>
+
 <div class="flex flex-wrap my-4 lg:px-4">
   <div class="w-full p-4 lg:w-1/4">
   <nav class="hidden sm:flex" aria-label="Breadcrumb">
@@ -292,3 +294,5 @@
     </div>
   </main>
 </div>
+
+<%end%>
