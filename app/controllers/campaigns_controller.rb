@@ -8,6 +8,7 @@ class CampaignsController < ApplicationController
     # We explicitly load the records to avoid triggering multiple DB calls in the views when checking if records exist and iterating over them.
     # Calling @campaigns.any? in the view will use the loaded records to check existence instead of making an extra DB call.
     @campaigns.load
+    @userpost = current_user.campaigns
   end
 
   # GET /campaigns/1

@@ -68,6 +68,8 @@ class User < ApplicationRecord
   # just when they change it
   before_create :skip_confirmation!
 
+  has_many :campaigns
+
   # Validations
   validates :name, presence: true
 end
