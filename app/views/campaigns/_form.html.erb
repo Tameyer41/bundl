@@ -13,14 +13,22 @@
         </svg>
       </div>
       <%= form.text_field :user_id, class: "form-control focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-none rounded-l-md pl-10 sm:text-sm border-gray-300", placeholder:"John Doe" %>
+      <p class="ml-5 mr-5"> or </p>
+      <%= form.collection_select(:user_id, User.all, :id, :email, :prompt => true) %>
+
     </div>
   </div>
   </div>
 
   <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
+    <%= form.label :files %>
+    <%= form.file_field :files, multiple: true, class: "form-control shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
   </div>
+
+  <div class="form-group">
+  <%= form.label :title %>
+  <%= form.text_field :title, class: "form-control shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
+</div>
 
   <div class="form-group">
     <%= form.label :description %>
