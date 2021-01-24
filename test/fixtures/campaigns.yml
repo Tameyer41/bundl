@@ -3,9 +3,12 @@
 # Table name: campaigns
 #
 #  id            :bigint           not null, primary key
+#  hashid        :string
 #  link          :string
 #  paymentamount :float
 #  paymenttype   :string
+#  slug          :string
+#  status        :boolean
 #  title         :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null

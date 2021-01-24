@@ -18,6 +18,8 @@ gem "jbuilder", "~> 2.5"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
+gem 'friendly_id', '~> 5.4.2'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
 
