@@ -23,6 +23,8 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Campaign < ApplicationRecord
+  extend FriendlyId
+  friendly_id :hashid, use: :slugged
   before_validation :set_hashid, prepend: true, if: Proc.new{ |article| article.hashid.nil? }
 
     private

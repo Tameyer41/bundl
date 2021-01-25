@@ -7,12 +7,17 @@
 #  accepted_terms_at      :datetime
 #  admin                  :boolean
 #  announcements_read_at  :datetime
+#  city                   :string
 #  confirmation_sent_at   :datetime
 #  confirmation_token     :string
 #  confirmed_at           :datetime
+#  dob                    :date
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  first_name             :string
+#  gender                 :string
+#  instagramhandle        :string
+#  instagramprice         :integer
 #  invitation_accepted_at :datetime
 #  invitation_created_at  :datetime
 #  invitation_limit       :integer
@@ -21,12 +26,17 @@
 #  invitations_count      :integer          default(0)
 #  invited_by_type        :string
 #  last_name              :string
+#  phonenumber            :string
 #  preferred_language     :string
+#  primarycat             :string
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
+#  secondarycat           :string
 #  time_zone              :string
 #  unconfirmed_email      :string
+#  youtubehandle          :string
+#  youtubeprice           :integer
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  invited_by_id          :bigint
