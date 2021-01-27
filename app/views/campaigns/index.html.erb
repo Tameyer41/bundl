@@ -114,10 +114,8 @@
 
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 mt-8">
   <div class="flex justify-between items-center mb-4">
-    <% if @campaigns.any? %>
     <% if current_user.admin? %>
       <%= link_to 'New Campaign', new_campaign_path, class: "btn btn-primary" %>
-    <% end %>
     <% end %>
   </div>
 
