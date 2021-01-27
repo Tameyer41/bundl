@@ -4,4 +4,4 @@
 # Examples:
 #
 # Uncomment the following to create an Admin user for Production in Jumpstart Pro
-# User.create name: "name", email: "email", password: "password", password_confirmation: "password", admin: true, terms_of_service: true
+User.create name: "Tyler Meyer", email: "tyler@trybundl.com", password: "TryMyBundl12@", password_confirmation: "TryMyBundl12@", admin: true, terms_of_service: true
