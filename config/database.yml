@@ -86,6 +86,6 @@ test:
 #
 production:
   <<: *default
-  database: <% ENV['DATABASE_URL'] %>
+  database: postgres://xqjuwchbtncfbr:ba8782d2e4b8bbfba00b6480d27781e9812ef687ce467f1ab72e1aedb78c9d06@ec2-3-216-89-250.compute-1.amazonaws.com:5432/d7bcjdj89feghe
   #username: jumpstart
   #password: <%= ENV['JUMPSTART_DATABASE_PASSWORD'] %>
