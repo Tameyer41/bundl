@@ -86,6 +86,6 @@ test:
 #
 production:
   <<: *default
-  database: jumpstart_production
-  username: jumpstart
-  password: <%= ENV['JUMPSTART_DATABASE_PASSWORD'] %>
+  database: <% ENV['DATABASE_URL'] %>
+  #username: jumpstart
+  #password: <%= ENV['JUMPSTART_DATABASE_PASSWORD'] %>

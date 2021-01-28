@@ -6,15 +6,13 @@
   </div>
   <% if @userpost.any? %>
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 mt-8">
-<dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+<dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
     <div class="bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <div class="flex items-center">
-          <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+          <div>
             <!-- Heroicon name: users -->
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
+            <%= render_svg "base4", styles: "fill-current text-gray-700 hover:text-gray-800" %>
           </div>
           <div class="ml-5 w-0 flex-1">
             <dt class="text-sm font-medium text-gray-500 truncate">
@@ -44,11 +42,9 @@
     <div class="bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <div class="flex items-center">
-          <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+          <div>
             <!-- Heroicon name: mail-open -->
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
-            </svg>
+            <%= render_svg "base", styles: "fill-current text-gray-700 hover:text-gray-800" %>
           </div>
           <div class="ml-5 w-0 flex-1">
             <dt class="text-sm font-medium text-gray-500 truncate">
@@ -78,11 +74,42 @@
     <div class="bg-white overflow-hidden shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <div class="flex items-center">
-          <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+          <div>
+            <!-- Heroicon name: mail-open -->
+            <%= render_svg "base2", styles: "fill-current text-gray-700 hover:text-gray-800" %>
+          </div>
+          <div class="ml-5 w-0 flex-1">
+            <dt class="text-sm font-medium text-gray-500 truncate">
+              Avg. Open Rate
+            </dt>
+            <dd class="flex items-baseline">
+              <div class="text-2xl font-semibold text-gray-900">
+                58.16%
+              </div>
+
+              <div class="ml-2 flex items-baseline text-sm font-semibold text-green-600">
+                <svg class="self-center flex-shrink-0 h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="sr-only">
+                  Increased by
+                </span>
+                5.4%
+              </div>
+            </dd>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <div class="bg-white overflow-hidden shadow rounded-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <div class="flex items-center">
+          <div>
             <!-- Heroicon name: cursor-click -->
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-            </svg>
+            <%= render_svg "base3", styles: "fill-current text-gray-700 hover:text-gray-800" %>
           </div>
           <div class="ml-5 w-0 flex-1">
             <dt class="text-sm font-medium text-gray-500 truncate">
@@ -121,87 +148,103 @@
 
   <% if @userpost.any? %>
     <div>
+    <div class="pb-1">
+  <h3 class="text-xl leading-6 font-bold text-gray-900">Active Campaigns</h3>
+</div>
     <!-- This example requires Tailwind CSS v2.0+ -->
     <div
-        class="container mx-auto mt-6 bg-white py-5 flex items-center justify-between px-5 sm:px-10 shadow rounded-t">
+        class="container mx-auto mt-6 bg-white py-5 flex items-center justify-between px-5 sm:px-10 shadow rounded-t-lg">
         <div class="mb-0">
-           <h2 class="text-gray-800 text-lg font-bold">Current Campaigns</h2>
+           <h2 class="text-gray-800 text-lg font-semibold">Projects</h2>
         </div>
     </div>
-
-
-        <% @userpost.each do |campaign| %>
-
-
-
-          
-          <div>
-                <div class="xl:px-8 px-8 md:px-8 px-4 py-1 bg-white ">
-                <%= link_to campaign, :action => 'go' do %>
-                    <div class="p-5 lg:flex justify-between rounded mb-2 bg-gray-50 cursor-pointer border-l-4 border-blue-300 ">
-                    <div class="flex-shrink-0">               
-                    <% campaign.files.each do |file| %>
-                      <%= image_tag file, class: "rounded-lg w-14 h-14 object-cover" %>
-                    <%end%>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="flex flex-col">
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-hidden border-b border-gray-200">
+          <table class="min-w-full divide-y divide-gray-200 table-fixed">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-6 py-4 whitespace-nowrap w-1/3">
+                  <div class="flex items-center">
+                    <div class="ml-4">
+                      <div class="text-sm font-medium text-gray-600">Campaign Name</div>
                     </div>
-                        <div class="lg:w-4/12 w-full">
-                            <p class="text-lg font-md font-bold"><%= campaign.title %></p>
-                            <ul>
-                                <li class="text-sm text-gray-500 list-none"><%= campaign.description %></li>
-                            </ul>
+                  </div>
+                </th>
+                <th class="px-6 py-4 whitespace-nowrap w-1/6">
+                  <div class="text-sm font-medium text-gray-600">Post Type</div>
+                </th>
+                <th class="px-6 py-4 whitespace-nowrap w-1/6"><div class="text-sm font-medium text-gray-600">Payment Type</div></th>
+                <th class="px-6 py-4 whitespace-nowrap w-1/6"><div class="text-sm font-medium text-gray-600">Campaign Due Date</div></th>
+                <th class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium w-1/6">
+                  <a href="#" class="text-white hover:text-white">Edit</a>
+                </th>
+              </tr>
+  
+              <!-- More items... -->
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+       <% @userpost.each do |campaign| %>
+          <%= link_to campaign, :action => 'go' do %>
+          <div class="flex flex-col">
+          <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+              <div class="shadow overflow-hidden border-b border-gray-50">
+                <table class="min-w-full divide-y divide-gray-200 table-fixed">
+                  <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap w-1/3">
+                        <div class="flex items-center">
+                          <div>
+                          <% campaign.files.each do |file| %>
+                            <%= image_tag file, class: "rounded-lg w-14 h-14 object-cover" %>
+                          <%end%>  
+                          </div>
+                          <div class="ml-4">
+                            <div class="text-sm font-semibold text-gray-900">
+                            <%= campaign.title %>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                            <%= campaign.description %>
+                            </div>
+                          </div>
                         </div>
-                        <div class="lg:w-4/12 flex md:flex-row flex-col justify-between items-center">
-                            <div class=" mt-2 flex flex-col">
-                                <p class="text-md font-semibold text-gray-900 text-center">24</p>
-                                <div class="rounded-md flex items-center justify-center md:my-0 my-2">
-                                    <p class="text-sm text-gray-500">Checklist Items</p>
-                                </div>
-                            </div>
-                            <div class=" mt-2  flex flex-col">
-                                <p class="text-md font-semibold text-gray-900 text-center"><time datetime="2020-01-07"><%= campaign.created_at.strftime("%b, %d %Y") %></time></p>
-                                <div class="rounded-md flex items-center justify-center md:my-0 my-2">
-                                    <p class="text-sm text-gray-500">Created on</p>
-                                </div>
-                            </div>
-                            <div class=" mt-2  flex flex-col">
-                                <p class="text-md font-semibold text-gray-900 text-center md:my-0 my-2">Feb, 2 2021</p>
-                                <div class="rounded-md flex items-center justify-center">
-                                    <p class="text-sm text-gray-500">Due Date</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="lg:w-3/12 flex md:flex-row-reverse lg:flex-col flex-col lg:items-end justify-between lg:mt-0 mt-4">
-                            <div class="flex items-center">
-                                <div
-                                    class="ml-4 bg-blue-200 h-6 w-20  rounded-full flex items-center justify-center">
-                                    <span class="text-xs text-gray-800 font-normal"><%= campaign.paymenttype %></span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex items-end flex-no-wrap md:mt-0 mt-4">
-                                <% if campaign.status == true %>
-                                <p class="mt-2 flex items-center text-sm text-gray-500">
-                                  <!-- Heroicon name: check-circle -->
-                                  <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                  </svg>
-                                  Accepted Proposal
-                                </p>
-                                <%else%>
-                                <p class="mt-2 flex items-center text-sm text-gray-500">
-                                <!-- Heroicon name: check-circle -->
-                                <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 24 24" fill="#fc8181" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                                Please review your proposal
-                              </p>
-                                <%end%>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <%end%>
-                    </div> 
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap w-1/6 text-center">
+                        <div class="text-sm text-gray-900">Instagram Post</div>
+                        <div class="text-sm text-gray-500">3x posts</div>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap w-1/6 text-center ">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        <%= campaign.paymenttype %>
+                        </span>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500 w-1/6">
+                        February 2, 2021
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium w-1/6">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                      </td>
+                    </tr>
+        
+                    <!-- More items... -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <%end%>
+        </div>
     <% end %>
           
     </div>
